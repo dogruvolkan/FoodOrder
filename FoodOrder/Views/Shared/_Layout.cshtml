@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/ef6f197b7b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header class="position-sticky top-0 ">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand text-pink fw-bold" asp-area="" asp-controller="Home" asp-action="Index">Söyle Gelsin</a>
@@ -35,7 +35,7 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container ">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -45,10 +45,11 @@
         <div class="container">
            <div class="row">
                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                   <p class="fw-bold">Söyle Gelsin</p>
+                   <p class="fw-bold mt-2">Söyle Gelsin</p>
+                   <p>Canın ne isterse Söyle Gelsinden söyle anında kapına gelsin.</p>
                </div>
                 <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <p class="fw-bold">İletişim</p>
+                    <p class="fw-bold mt-2">İletişim</p>
                     <div class="mt-1">
                         <span><i class="fa-brands fa-instagram"></i> Instagram</span>
                     </div>
@@ -63,7 +64,11 @@
                     </div>
                 </div>
                 <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                    <p class="fw-bold">Söyle Gelsin</p>
+                    <p class="fw-bold mt-2">Adres</p>
+                    <address>
+                        Etiler Mah. Tanburi Ali Efendi Sok. Maya Residences Sit.
+                        T Blok No:13/334 Beşiktaş/İstanbul, Türkiye 34337
+                    </address>
                 </div>
            </div>
         </div>

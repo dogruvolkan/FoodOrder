@@ -13,7 +13,9 @@ html {
   min-height: 100%;
 }
 
-
+header{
+    z-index:100;
+}
 
 .text-pink{
     color:#ff1448 !important;
@@ -38,5 +40,5 @@ html {
 }
 
 footer{
-    padding:25px 0;
+    padding:20px 0;
 }
