@@ -1,0 +1,42 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+
+.text-pink{
+    color:#ff1448 !important;
+}
+
+.nav-link{
+    letter-spacing:1px;
+}
+
+.nav-item{
+    padding-left:8px;
+}
+
+.navbar-brand{
+    font-size:25px;
+}
+
+.carousel-inner img{
+    height:350px;
+    background-position:center;
+    background-size:contain;
+}
+
+footer{
+    padding:25px 0;
+}

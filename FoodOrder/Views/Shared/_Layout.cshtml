@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Söyle Gelsin</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/FoodOrder.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/ef6f197b7b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand text-pink fw-bold" asp-area="" asp-controller="Home" asp-action="Index">Söyle Gelsin</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-pink fw-bold" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-pink fw-bold" asp-area="">Tarifler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-pink fw-bold" asp-area="">Menu</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top">
+        <div class="container">
+           <div class="row">
+               <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                   <p class="fw-bold">Söyle Gelsin</p>
+               </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <p class="fw-bold">İletişim</p>
+                    <div class="mt-1">
+                        <span><i class="fa-brands fa-instagram"></i> Instagram</span>
+                    </div>
+                    <div class="mt-1">
+                        <span><i class="fa-brands fa-facebook"></i> Facebook</span>
+                    </div>
+                    <div class="mt-1">
+                        <span><i class="fa-brands fa-twitter"></i> Twitter</span>
+                    </div>
+                    <div class="mt-1">
+                        <span><i class="fa-brands fa-youtube"></i> Youtube</span>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <p class="fw-bold">Söyle Gelsin</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
