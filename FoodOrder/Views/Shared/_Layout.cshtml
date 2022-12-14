@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="~/FoodOrder.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/ef6f197b7b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/css/jquery-ui.min.css"/>
 </head>
 <body>
     <header class="position-sticky top-0 ">
@@ -25,7 +26,7 @@
                             <a class="nav-link text-pink fw-bold" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-pink fw-bold" asp-area="">Tarifler</a>
+                            <a class="nav-link text-pink fw-bold" asp-area="" asp-controller="Recipe" asp-action="Index">Tarifler</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-pink fw-bold" asp-area="">Menu</a>
@@ -35,7 +36,7 @@
             </div>
         </nav>
     </header>
-    <div class="container ">
+    <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -76,6 +77,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

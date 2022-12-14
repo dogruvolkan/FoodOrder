@@ -46,3 +46,53 @@ footer{
 .card{
     height:250px;
 }
+
+.fa-instagram {
+    color: #e95950;
+}
+
+.fa-facebook {
+    color: #4267B2;
+}
+
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+
+.fa-youtube {
+    color: #FF0000;
+}
+
+#recipe {
+    min-width: 200px;
+}
+
+#recipe-list {
+    top: 5rem; 
+}
+
+#recipe-list::-webkit-scrollbar{
+    width:10px;
+}
+
+#recipe-list::-webkit-scrollbar-track {
+   background-color:#ffffff;
+}
+
+#recipe-list::-webkit-scrollbar-track {
+   background-color: #ff1448;
+   border-radius:10px;
+}
+
+
+
+.recipe-item:hover {
+    background-color: #0d243d;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.recipe-item:hover a {
+    color: #ffffff !important;
+}
