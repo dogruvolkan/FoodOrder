@@ -43,8 +43,24 @@ footer{
     padding:20px 0;
 }
 
-.card{
-    height:250px;
+.card {
+    position: relative;
+    height: 280px;
+}
+
+
+.card-body button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding:10px;
+    border:none;
+}
+
+.card img {
+    max-height:200px;
+    background-position: center;
+    background-size: contain;
 }
 
 .fa-instagram {
@@ -64,27 +80,23 @@ footer{
     color: #FF0000;
 }
 
-#recipe {
-    min-width: 200px;
-}
 
 #recipe-list {
     top: 5rem; 
 }
 
-#recipe-list::-webkit-scrollbar{
+#recipe-list ul::-webkit-scrollbar{
     width:10px;
 }
 
-#recipe-list::-webkit-scrollbar-track {
+#recipe-list ul::-webkit-scrollbar-track {
    background-color:#ffffff;
 }
 
-#recipe-list::-webkit-scrollbar-track {
+#recipe-list ul::-webkit-scrollbar-track {
    background-color: #ff1448;
    border-radius:10px;
 }
-
 
 
 .recipe-item:hover {

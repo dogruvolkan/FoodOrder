@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using FoodOrder.Models;
 
 namespace FoodOrder.Controllers
 {
@@ -6,6 +7,25 @@ namespace FoodOrder.Controllers
     {
         public IActionResult Index()
         {
+            return View();
+        }
+
+        [HttpPost]
+
+        public IActionResult GetRecipeCard([FromBody] List<Recipe> recipes)
+        {
+            return PartialView("_RecipeCard", recipes);
+        }
+
+        public IActionResult Search([FromQuery] string recipe)
+        {
+            ViewBag.Recipe = recipe;
+            return View();
+        }
+
+        public IActionResult Order([FromQuery] string id)
+        {
+            ViewBag.Id = id;
             return View();
         }
     }
