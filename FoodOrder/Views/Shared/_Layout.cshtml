@@ -22,9 +22,7 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-pink fw-bold" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
-                        </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link text-pink fw-bold" asp-area="" asp-controller="Recipe" asp-action="Index">Tarifler</a>
                         </li>
@@ -38,6 +36,7 @@
     </header>
     <div class="container-fluid">
         <main role="main" class="pb-3">
+            <marquee direction=left><p class="fw-bold fs-4">🎉🎈🎊🍕🍔🍟🌭🍗  Söyle gelsinde günün kampanyası bir menü alana ikinci menü 50% indirimli 🎉🎈🎊🍕🍔🍟🌭🍗 </p> </marquee>
             @RenderBody()
         </main>
     </div>
@@ -45,11 +44,11 @@
     <footer class="border-top">
         <div class="container">
            <div class="row">
-               <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+               <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
                    <p class="fw-bold mt-2">Söyle Gelsin</p>
                    <p>Canın ne isterse Söyle Gelsinden söyle anında kapına gelsin.</p>
                </div>
-                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
                     <p class="fw-bold mt-2">İletişim</p>
                     <div class="mt-1">
                         <span><i class="fa-brands fa-instagram"></i> Instagram</span>
@@ -64,12 +63,16 @@
                         <span><i class="fa-brands fa-youtube"></i> Youtube</span>
                     </div>
                 </div>
-                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
                     <p class="fw-bold mt-2">Adres</p>
                     <address>
                         Etiler Mah. Tanburi Ali Efendi Sok. Maya Residences Sit.
                         T Blok No:13/334 Beşiktaş/İstanbul, Türkiye 34337
                     </address>
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 app">
+                    <p class="fw-bold mt-2">Uygulamayı hemen indir kampanyaları kaçırma</p>
+                    <img src="~/images/apps/app.png"/>
                 </div>
            </div>
         </div>
