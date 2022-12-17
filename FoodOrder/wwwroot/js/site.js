@@ -34,15 +34,14 @@ async function getOrderRecipe(id , showId) {
     showOrderRecipeDetails(recipe, showId);
 }
 
-function showOrderRecipeDetails(data, showId) {
+function showOrderRecipeDetails(orderRecipeDetails, showId) {
     $.ajax({
-        contentType: "application/json; charset=utf-8",
+        url: "/Recipe/ShowOrder",
+        data: orderRecipeDetails,
         dataType: "html",
         type: "POST",
-        url: "/Recipe/ShowOrder",
-        data: JSON.stringify(data),
         success: function (htmlResult) {
-            $("#" + showId).html(htmlResult);
+            $('#' + showId).html(htmlResult);
         }
     })
 }

@@ -112,3 +112,8 @@ footer{
 .recipe-item:hover a {
     color: #ffffff !important;
 }
+
+
+#order-img{
+    height:200px;
+}

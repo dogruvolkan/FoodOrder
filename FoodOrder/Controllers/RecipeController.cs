@@ -31,9 +31,9 @@ namespace FoodOrder.Controllers
 
         [HttpPost]
 
-        public IActionResult ShowOrder([FromBody] OrderRecipeDetails details)
+        public IActionResult ShowOrder( OrderRecipeDetails orderRecipeDetails)
         {
-            return PartialView("_ShowOrder",details);
+            return PartialView("_ShowOrder", orderRecipeDetails);
         }
     }
 }
