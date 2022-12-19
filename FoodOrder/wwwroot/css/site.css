@@ -117,3 +117,8 @@ footer{
 #order-img{
     height:200px;
 }
+
+
+.validation-summary-errors li{
+    color:#dc3545;
+}
