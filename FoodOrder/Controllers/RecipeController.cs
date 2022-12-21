@@ -1,10 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using FoodOrder.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FoodOrder.Controllers
 {
     public class RecipeController : Controller
     {
+
+        private readonly UserManager<ApplicationUser> _userManager;
+        public RecipeController(UserManager<ApplicationUser> userManager)
+        {
+            _userManager = userManager;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -23,17 +32,31 @@ namespace FoodOrder.Controllers
             return View();
         }
 
-        public IActionResult Order([FromQuery] string id)
+        public  IActionResult  Order([FromQuery] string id)
         {
             ViewBag.Id = id;
+           
             return View();
         }
 
         [HttpPost]
 
-        public IActionResult ShowOrder( OrderRecipeDetails orderRecipeDetails)
+        public async Task <IActionResult> ShowOrder( OrderRecipeDetails orderRecipeDetails)
         {
+            Random random = new Random();
+            ViewBag.Price = random.Next(150, 500);
+            var user = await _userManager.GetUserAsync(HttpContext.User);
+            ViewBag.UserId = user?.Id;
+            ViewBag.Address = user?.Address;
             return PartialView("_ShowOrder", orderRecipeDetails);
+        }
+
+        [HttpPost]
+        [Authorize]
+
+        public IActionResult Order(Order order)
+        {
+            return View(order);
         }
     }
 }

@@ -118,7 +118,17 @@ footer{
     height:200px;
 }
 
+.qtyselection{
+    user-select:none;
+    -ms-user-select:none;
+    -moz-user-select:none;
+}
 
-.validation-summary-errors li{
-    color:#dc3545;
+
+.validation-summary-errors li {
+    color: #dc3545;
+}
+
+.fa-plus , .fa-minus{
+    cursor:pointer;
 }
