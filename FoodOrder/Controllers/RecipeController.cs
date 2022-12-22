@@ -2,6 +2,7 @@
 using FoodOrder.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
+using FoodOrder.ContextDBConfig;
 
 namespace FoodOrder.Controllers
 {
@@ -9,9 +10,11 @@ namespace FoodOrder.Controllers
     {
 
         private readonly UserManager<ApplicationUser> _userManager;
-        public RecipeController(UserManager<ApplicationUser> userManager)
+        private readonly FoodOrderDBContext context;
+        public RecipeController(UserManager<ApplicationUser> userManager , FoodOrderDBContext dBContext)
         {
             _userManager = userManager;
+            context = dBContext;
         }
 
         public IActionResult Index()
@@ -54,9 +57,17 @@ namespace FoodOrder.Controllers
         [HttpPost]
         [Authorize]
 
-        public IActionResult Order(Order order)
+        public IActionResult Order([FromForm]Order order)
         {
-            return View(order);
+            order.OrderTime = DateTime.Now;
+            if (ModelState.IsValid)
+            {
+                
+                context.Orders.Add(order);
+                context.SaveChanges();
+                return RedirectToAction("Index", "Recipe");
+            }
+            return RedirectToAction("Order" , "Recipe", new {id=order.Id});
         }
     }
 }
